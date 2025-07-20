@@ -15,7 +15,7 @@ function Navbar() {
         >
             <div className="flex justify-center items-center gap-8 self-stretch">
                 <div className="flex-1 flex justify-start items-start">
-                    <img className="w-28 h-9" src={logo} />
+                    <img className="w-28 h-9" src={logo} alt="SOLVIA 로고" />
                 </div>
                 <div className="flex items-center gap-8">
                     <button 
@@ -39,7 +39,7 @@ function Navbar() {
                 </div>
                 <div className="flex justify-end items-center gap-4 flex-1">
                     <a 
-                        href="mailto:geonwoongpark@example.com?subject=가입 문의&body=안녕하세요, 가입에 대해 문의드립니다."
+                        href="mailto:rjsdnd0420@naver.com?subject=가입 문의&body=안녕하세요, 가입에 대해 문의드립니다."
                         className="flex px-[20px] py-2 justify-center items-center gap-2 hover:opacity-80 transition-opacity"
                         style={{ background: "var(--Color-Neutral-Darkest, #000)" }}
                     >

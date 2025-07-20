@@ -3,6 +3,7 @@ import myImg from "../assets/4-1.png";
 function Layout4() {
   return (
     <div
+      id="layout4"
       className="flex w-[1440px] py-[112px] px-[64px] flex-col items-center gap-[80px]"
       style={{ background: "var(--Color-Scheme-1-Background, #FFF)" }}
     >
@@ -72,9 +73,15 @@ function Layout4() {
               </div>
             </div>
             <div className="flex items-center gap-6">
-              <div
-                className="flex py-3 px-6 justify-center items-center gap-2"
+              <button
+                className="flex py-3 px-6 justify-center items-center gap-2 hover:bg-gray-50 transition-colors"
                 style={{ border: "1px solid var(--Color-Neutral-Darkest, #000)" }}
+                onClick={() => {
+                  const element = document.getElementById('layout3');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
               >
                 <div
                   className="text-Color-Neutral-Darkest font-['Nunito_Sans'] text-base font-normal leading-[150%]"
@@ -82,8 +89,16 @@ function Layout4() {
                 >
                   자세히
                 </div>
-              </div>
-              <div className="flex justify-center items-center gap-2">
+              </button>
+              <button 
+                className="flex justify-center items-center gap-2 hover:opacity-70 transition-opacity"
+                onClick={() => {
+                  const element = document.getElementById('cta');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
                 <div
                   className="text-Color-Neutral-Darkest font-['Nunito_Sans'] text-base font-normal leading-[150%]"
                   style={{ color: "var(--Color-Neutral-Darkest, #000)" }}
@@ -102,12 +117,14 @@ function Layout4() {
                     stroke="black"
                   />
                 </svg>
-              </div>
+              </button>
             </div>
           </div>
           <div
             className="h-[640px] flex-1 aspect-[15/16] rounded-none bg-cover bg-center"
             style={{ backgroundImage: `url(${myImg})` }}
+            role="img"
+            aria-label="SOLVIA 마케팅 및 고객 대응 솔루션을 보여주는 이미지"
           ></div>
         </div>
       </div>

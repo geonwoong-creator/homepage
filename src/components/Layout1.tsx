@@ -1,7 +1,7 @@
 import myImg from "../assets/Placeholder Image.png";
 function Layout1() {
     return (
-        <div className="flex w-full py-[112px] px-[64px] flex-col items-center gap-[80px]">
+        <div id="layout1" className="flex w-full py-[112px] px-[64px] flex-col items-center gap-[80px]">
             <div style={{ background: "var(--Color-Scheme-1-Background, #FFF)" }}>
                 <div className="flex max-w-[1280px] flex-col items-start gap-[80px] self-stretch">
                     <div className="flex h-[640px] items-center gap-[80px] self-stretch">
@@ -23,20 +23,43 @@ function Layout1() {
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-6">
-                                    <div className="flex py-3 px-6 justify-center items-center gap-2 border border-Color-Neutral-Darkest" style={{ borderColor: "var(--Color-Neutral-Darkest, #000)" }} >
+                                    <button 
+                                        className="flex py-3 px-6 justify-center items-center gap-2 border border-Color-Neutral-Darkest hover:bg-gray-50 transition-colors" 
+                                        style={{ borderColor: "var(--Color-Neutral-Darkest, #000)" }}
+                                        onClick={() => {
+                                            const element = document.getElementById('layout2');
+                                            if (element) {
+                                                element.scrollIntoView({ behavior: 'smooth' });
+                                            }
+                                        }}
+                                    >
                                         <div className="justify-start text-Color-Neutral-Darkest text-base font-normal font-['Nunito_Sans'] leading-normal">
                                             더 알아보기
                                         </div>
-                                    </div>
-                                    <div className="flex py-3 px-6 justify-center items-center gap-2 border border-Color-Neutral-Darkest" style={{ borderColor: "var(--Color-Neutral-Darkest, #000)" }} >
+                                    </button>
+                                    <button 
+                                        className="flex py-3 px-6 justify-center items-center gap-2 border border-Color-Neutral-Darkest hover:bg-gray-50 transition-colors" 
+                                        style={{ borderColor: "var(--Color-Neutral-Darkest, #000)" }}
+                                        onClick={() => {
+                                            const element = document.getElementById('cta');
+                                            if (element) {
+                                                element.scrollIntoView({ behavior: 'smooth' });
+                                            }
+                                        }}
+                                    >
                                         <div className="justify-start text-Color-Neutral-Darkest text-base font-normal font-['Nunito_Sans'] leading-normal">
                                             시작하기
                                         </div>
-                                    </div>
+                                    </button>
                                 </div>
                             </div>
                         </div>
-                        <div className="h-[640px] flex-1 aspect-[15/16] rounded-none bg-cover bg-center" style={{ backgroundImage: `url(${myImg})` }} >
+                        <div 
+                            className="h-[640px] flex-1 aspect-[15/16] rounded-none bg-cover bg-center" 
+                            style={{ backgroundImage: `url(${myImg})` }}
+                            role="img"
+                            aria-label="SOLVIA 고객 상담 솔루션을 보여주는 이미지"
+                        >
                         </div>
                     </div>
                 </div>
