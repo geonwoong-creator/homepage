@@ -1,6 +1,7 @@
-function CTA() {
+function CTA({ id }: { id?: string }) {
   return (
     <div
+      id={id}
       className="flex w-[1440px] py-[112px] px-[64px] flex-col items-center gap-[80px]"
       style={{ background: "var(--Color-Scheme-1-Background, #FFF)" }}
     >

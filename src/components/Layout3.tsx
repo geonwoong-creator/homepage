@@ -2,9 +2,9 @@ import myImg1 from "../assets/3-1.png";
 import myImg2 from "../assets/3-2.png";
 import myImg3 from "../assets/3-3.png";
 
-function Layout3() {
+function Layout3({ id }: { id?: string }) {
   return (
-    <div className="flex w-[1440px] py-[112px] px-[64px] flex-col items-center gap-[80px]">
+    <div id={id} className="flex w-[1440px] py-[112px] px-[64px] flex-col items-center gap-[80px]">
       <div className="flex max-w-[1280px] flex-col items-center gap-[80px] self-stretch">
         <div
           className="w-[768px] max-w-[768px] text-center text-Color-Scheme-1-Text font-['Outfit'] text-[44px] font-medium leading-[120%] tracking-[-0.44px]"

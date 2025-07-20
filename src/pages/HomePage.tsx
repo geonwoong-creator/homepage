@@ -14,10 +14,10 @@ export default function HomePage() {
             <main>
                 <Header />
                 <Layout1 />
-                <Layout2 />
-                <Layout3 />
+                <Layout2 id="layout2" />
+                <Layout3 id="layout3" />
                 <Layout4 />
-                <CTA/>
+                <CTA id="cta" />
             </main>
             <Footer />
         </div>
